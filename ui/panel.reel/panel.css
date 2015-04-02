@@ -1,0 +1,33 @@
+.Panel {
+    border: 1px solid rgb(96, 150, 211);
+    width: 150px;
+    padding: 5px;
+}
+
+.Panel header {
+    color: rgb(96, 150, 211);
+    text-align: center;
+    font-size: large;
+}
+
+.Panel ul {
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+}
+
+.Panel li {
+    text-align: center;
+    font-style: italic;
+    color: gray;
+    padding: 8px 2px;
+    font-size: 12px;
+}
+
+
+.Panel footer {
+    text-align: end;
+    font-size: 10px;
+    color: gray;
+}
+

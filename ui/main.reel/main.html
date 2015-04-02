@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Main</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "main"}
+                }
+            },
+
+            "switchPanel": {
+                "prototype": "ui/main.reel[button]",
+                "properties": {
+                    "element": {"#": "switchPanelButton"},
+                    "label": "Switch List"
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ]
+            },
+
+            "substitution": {
+                "prototype": "montage/ui/substitution.reel",
+                "properties": {
+                    "element": {"#": "substitution"}
+                },
+                "bindings": {
+                    "switchValue": {"<-": "@owner.selectedPanel"}
+                }
+            },
+
+            "panel1": {
+                "prototype": "ui/panel.reel",
+                "properties": {
+                    "element": {"#": "panel1"},
+                    "rank": 2.5
+                }
+            },
+
+            "panel1Title": {
+                "prototype": "montage/ui/text.reel",
+                "properties": {
+                    "element": {"#": "panel1Title"},
+                    "value": "Vegetables"
+                }
+            },
+
+            "panel2": {
+                "prototype": "ui/panel.reel",
+                "properties": {
+                    "element": {"#": "panel2"},
+                    "rank": 3.65
+                }
+            },
+
+            "panel2Title": {
+                "prototype": "montage/ui/text.reel",
+                "properties": {
+                    "element": {"#": "panel2Title"},
+                    "value": "Fruits"
+                }
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <div data-montage-id="switchPanelButton" class="switchPanelButton"></div>
+
+        <div data-montage-id="substitution" class="substitution">
+
+            <div data-arg="vegetables" data-montage-id="panel1">
+                <div data-arg="title" data-montage-id="panel1Title"></div>
+                <div data-arg="content">
+                    <ul>
+                        <li>Tomato</li>
+                        <li>Salad</li>
+                        <li>Olive</li>
+                        <li>Broccoli</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-arg="fruits" data-montage-id="panel2">
+                <div data-arg="title" data-montage-id="panel2Title"></div>
+                <div data-arg="content">
+                    <ul>
+                        <li>Apple</li>
+                        <li>Orange</li>
+                        <li>Grape</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

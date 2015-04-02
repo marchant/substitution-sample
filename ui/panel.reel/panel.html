@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="panel.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+
+        "starRating": {
+            "prototype": "ui/star-rating.reel",
+            "properties": {
+                "element": {"#": "starRating"},
+                "readOnly": true
+            },
+            "bindings": {
+                "value": {"<-": "@owner.rank"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Panel">
+        <header>
+            <div data-param="title"></div>
+        </header>
+
+        <section>
+            <div data-param="content"></div>
+        </section>
+
+        <footer>
+            <div data-montage-id="starRating"></div>
+        </footer>
+    </div>
+</body>
+</html>

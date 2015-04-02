@@ -1,0 +1,21 @@
+.Main {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.substitution {
+
+}
+
+.switchPanelButton {
+    margin: 40px 0;
+    background: rgb(98, 213, 98);
+    padding: 10px;
+    color: rgb(249, 249, 249);
+    -webkit-user-select: none;
+    outline: none;
+    cursor: pointer;
+}
